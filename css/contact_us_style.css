@@ -1,0 +1,202 @@
+:root {
+  --contact-max: 1240px;
+}
+
+.contact-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-deep);
+  color: var(--text-primary);
+}
+
+.contact-main {
+  flex: 1;
+  padding-top: calc(var(--nav-offset, 7rem) + 0.2rem);
+}
+
+.contact-hero {
+  padding: 2rem 0 4rem;
+}
+
+.contact-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1.25rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.contact-back-link:hover {
+  color: var(--accent);
+}
+
+.contact-hero-shell {
+  max-width: var(--contact-max);
+  margin: 0 auto;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  border-radius: calc(var(--radius-lg) + 8px);
+  background:
+    radial-gradient(circle at top right, rgba(255, 107, 53, 0.14), transparent 28%),
+    linear-gradient(145deg, rgba(18, 21, 28, 0.97), rgba(9, 11, 15, 0.99));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 28px 64px rgba(0, 0, 0, 0.3);
+}
+
+.contact-intro-card,
+.contact-form-shell {
+  height: 100%;
+  padding: clamp(1.2rem, 2vw, 1.7rem);
+  border-radius: calc(var(--radius-lg) + 2px);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.contact-kicker,
+.contact-form-kicker {
+  margin-bottom: 0.6rem;
+  color: var(--accent);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-intro-card h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.9rem;
+}
+
+.contact-lead,
+.contact-form-head p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+.contact-form-head h2 {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  margin-bottom: 0.45rem;
+}
+
+.contact-methods {
+  display: grid;
+  gap: 0.9rem;
+  margin: 1.5rem 0;
+}
+
+.contact-method-card {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+  padding: 0.95rem 1rem;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: inherit;
+  text-decoration: none;
+  transition: transform var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.contact-method-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 107, 53, 0.22);
+  background: rgba(255, 107, 53, 0.08);
+}
+
+.contact-method-icon {
+  width: 2.9rem;
+  height: 2.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.contact-method-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.contact-method-copy strong {
+  color: var(--text-primary);
+  font-size: 0.96rem;
+}
+
+.contact-method-copy small {
+  color: var(--text-muted);
+  font-size: 0.83rem;
+}
+
+.contact-availability {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.contact-availability-chip {
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.contact-form-frame-wrap {
+  margin-top: 1.15rem;
+  border-radius: calc(var(--radius-lg) - 2px);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
+}
+
+.contact-form-frame {
+  width: 100%;
+  min-height: 1180px;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 991.98px) {
+  .contact-main {
+    padding-top: 5.2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-hero {
+    padding: 1.5rem 0 3rem;
+  }
+
+  .contact-hero-shell {
+    padding: 1rem;
+  }
+
+  .contact-method-card {
+    align-items: flex-start;
+  }
+
+  .contact-form-frame {
+    min-height: 1260px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-method-card:hover {
+    transform: none;
+  }
+}

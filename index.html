@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Home</title>
+    <meta name="description" content="Portfolio of Ankit Rathaur - Data Scientist focused on analytics, ML, and visualization.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<!-- BODY STRUCTURE -->
+<body class="home-page">
+    <div class="mesh-bg" aria-hidden="true"></div>
+    <div class="scroll-progress-wrap" aria-hidden="true">
+        <div id="scrollProgress" class="scroll-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Page scroll progress"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark site-navbar fixed-top">
+        <div class="container">
+            <button class="sidebar-toggle-btn d-none d-lg-inline-flex" type="button" id="sidebarToggle" aria-controls="homeSidebar" aria-expanded="true" aria-label="Close sidebar">
+                <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+                <span class="visually-hidden">Toggle sidebar</span>
+            </button>
+            <a class="navbar-brand" href="#home-content" aria-label="Ankit Rathaur home">
+                <span class="brand-mark" aria-hidden="true">
+                    <span class="brand-mark__core"></span>
+                    <span class="brand-mark__node brand-mark__node--one"></span>
+                    <span class="brand-mark__node brand-mark__node--two"></span>
+                </span>
+                <!-- <span class="brand-copy">
+                    <strong>AR</strong>
+                    <small>Data Lab</small>
+                </span> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home-content"><i class="fa-solid fa-house"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-1"><i class="fa-solid fa-user"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-projects" href="html/projects.html"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education-pg"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-form-id"><i class="fa-solid fa-paper-plane"></i> Connect</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-nav-cta" href="html/contact-us.html"><i class="fa-solid fa-address-book"></i> Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid px-3 px-lg-4 page-shell">
+        <div class="row g-4 g-lg-5">
+            <aside class="col-lg-3 col-xl-2 d-none d-lg-block sidebar-column" id="homeSidebar" data-aos="fade-right" data-aos-duration="600">
+                <div class="profile-card sticky-lg-top">
+                    <div class="profile-card-top">
+                        <!-- SIDEBAR PART 0 -->
+                        <span class="profile-status-badge">Available for collaboration</span>
+                        <!-- SIDEBAR PART 1 -->
+                        <div class="profile-avatar-wrap">
+                            <div class="profile-avatar-meta">
+                                <span class="profile-avatar-tag">Analytics</span>
+                                <span class="profile-avatar-tag">ML</span>
+                            </div>
+                            <div class="profile-avatar" role="img" aria-label="Ankit Rathaur initials">AR</div>
+                            <div class="profile-name">Ankit Rathaur</div>
+                            <p class="profile-role">Data Scientist | Analytics</p>
+                            <p class="profile-summary">Focused on turning research, modeling, and business context into decisions teams can actually act on.</p>
+                        </div>
+                        <!-- SIDEBAR PART 2 -->
+                        <div class="profile-focus-panel" aria-label="Current focus">
+                            <div class="profile-focus-head">
+                                <span class="profile-focus-label">Signal stack</span>
+                                <span class="profile-focus-chip">Live</span>
+                            </div>
+                            <div class="profile-focus-stream">
+                                <div class="profile-focus-item">
+                                    <strong>Now</strong>
+                                    <span>Building lean analytics systems with clear outputs.</span>
+                                </div>
+                                <div class="profile-focus-item">
+                                    <strong>Edge</strong>
+                                    <span>Machine learning choices shaped by business reality.</span>
+                                </div>
+                                <div class="profile-focus-item">
+                                    <strong>Output</strong>
+                                    <span>Dashboards and narratives teams can actually use.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SIDEBAR MEDIA LINKS -->
+                    <div class="social-row">
+                        <a href="mailto:ankitrathaur.du.or.26@gmail.com" aria-label="Email contact"><i class="fa-regular fa-envelope"></i></a>
+                        <a href="https://x.com/_Ankit_Rathaur" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/ankit-rathaur/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/t-Ankit-Rathaur?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="col-lg-9 col-xl-10" id="main-content">
+                <!-- ADDING BACKGROUND VIDEO -->
+                <!-- <video autoplay muted loop playsinline class="bg-video">
+                    <source src="..\assets\videos\5158727-hd_1920_1080_30fps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="content">
+                    <h1>Your Content Here</h1>
+                    <p>This sits above the video</p>
+                </div> -->
+
+                <div class="d-lg-none mb-4" data-aos="fade-up">
+                    <div class="profile-card">
+                        <div class="d-flex align-items-center gap-3 p-3">
+                            <div class="profile-avatar mb-0" style="width:72px;height:72px;font-size:1.35rem;border-radius:16px;">AR</div>
+                            <div class="flex-grow-1">
+                                <div class="profile-name mb-0" style="margin-top:0;">Ankit Rathaur</div>
+                                <p class="profile-role mb-2">Aspiring Data Scientist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="hero-section" id="home-content">
+                    <div class="row align-items-center">
+                        <div class="col-lg-10" data-aos="fade-up" data-aos-delay="50">
+                            <p class="hero-kicker">2026</p>
+                            <h1 class="hero-title">
+                                Turning data into <span class="text-accent">decisions</span> that move teams forward.
+                            </h1>
+                            <p class="hero-lead">
+                                Glad to have you here. I build analytical systems, machine learning workflows, and business-ready storytelling so teams can move from noise to confident action.
+                            </p>
+                            <div style="display:flex;">
+                                <!-- Let's talk Button -->
+                                <div class="hero-actions d-flex flex-wrap gap-3">
+                                <a class="btn btn-primary-custom" href="#contact-form-id">Let's talk</a>
+                                </div>
+                                <!-- Download CV button -->
+                                <div class="hero-actions d-flex flex-wrap gap-3" style="margin-left: 1rem;">
+                                <a class="btn btn-primary-custom" href="##..\assets\pdfs\jqiudiqwd452.pdf"><span style="margin-right: 0.5rem;">⬇</span>Download CV</a>
+                                </div>
+                            </div>                          
+                            
+                        </div>
+                    </div>                
+                </section>
+
+                <section class="intro-section border-top border-secondary border-opacity-25" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="intro-panel">
+                                <div class="row g-4 g-xl-5 align-items-start">
+                                    <div class="col-lg-5 col-xl-4">
+                                        <div class="intro-heading-block">
+                                            <p class="intro-kicker">What I bring</p>
+                                            <h2 class="intro-title">Analytical depth with structure leaders can trust.</h2>
+                                            <p class="intro-subcopy">A compact view of how I approach data work, communicate findings, and make analysis useful beyond the dashboard.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 col-xl-5">
+                                        <p class="intro-copy mb-0">
+                                            I am a Data Scientist focused on transforming complex information into decisions leaders can actually use.
+                                            My work blends <strong class="text-light">statistical modeling, machine learning, experimentation, and storytelling</strong>
+                                            so the output is not just analysis, but direction. Across <em>finance, healthcare, and marketing</em>, I use
+                                            <strong class="text-light">Python, R, SQL, and Tableau</strong> to move teams from ambiguity toward action.
+                                        </p>
+                                    </div>
+                                    <div class="col-xl-3">
+                                        <div class="intro-proof-grid intro-proof-grid--stacked">
+                                            <div class="intro-proof-card">
+                                                <strong>Decision-first</strong>
+                                                <span>Insights shaped for teams, not just notebooks.</span>
+                                            </div>
+                                            <div class="intro-proof-card">
+                                                <strong>End-to-end</strong>
+                                                <span>From raw data and models to communication and next steps.</span>
+                                            </div>
+                                            <div class="intro-proof-card">
+                                                <strong>Business-aware</strong>
+                                                <span>Methods chosen for clarity, speed, and practical adoption.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="education-section border-top border-secondary border-opacity-25" id="education-pg">
+                    <div class="education-shell">
+                        <div class="section-head education-head" data-aos="fade-up">
+                            <p class="about-kicker mb-2">Education</p>
+                            <h2>Built on mathematics, sharpened by <span class="text-accent">operations research</span>.</h2>
+                            <p>Each step strengthened the way I model uncertainty, structure analysis, and communicate outcomes with clarity.</p>
+                        </div>
+                        <div class="education-atlas" id="educationRoadmap" data-aos="fade-up" data-aos-delay="80">
+                            <div class="education-atlas__hero" data-education-reveal>
+                                <div class="education-atlas__copy">
+                                    <span class="education-kicker">Academic profile</span>
+                                    <strong>Quantitative rigor with a practical decision-making lens.</strong>
+                                    <p>My academic path combines mathematical foundations, operations research, and applied analytics. The result is a workflow that stays structured, interpretable, and useful in real settings.</p>
+                                </div>
+                                <!-- <div class="education-atlas__stats" aria-label="Education highlights">
+                                    <div class="education-stat">
+                                        <span class="education-stat__value">2020+</span>
+                                        <span class="education-stat__label">Focused journey</span>
+                                    </div>
+                                    <div class="education-stat">
+                                        <span class="education-stat__value">8.42</span>
+                                        <span class="education-stat__label">CGPA</span>
+                                    </div>
+                                    <div class="education-stat">
+                                        <span class="education-stat__value">Math + OR</span>
+                                        <span class="education-stat__label">Core strengths</span>
+                                    </div>
+                                </div> -->
+                            </div>
+
+                            <div class="education-grid">
+                                <article class="education-card education-card--featured" data-education-reveal>
+                                    <div class="education-card__rail"></div>
+                                    <div class="education-card__topline">
+                                        <span class="education-card__index">01</span>
+                                        <span class="education-card__status">Current</span>
+                                    </div>
+                                    <p class="education-card__duration">July 2024 - May 2026</p>
+                                    <h3>Master of Operational Research</h3>
+                                    <p class="education-card__institution">University of Delhi, New Delhi</p>
+                                    <p class="education-card__meta">Department of Operational Research</p>
+                                    <p class="education-card__copy">Advanced training in optimization, statistical reasoning, and forecasting with a strong focus on turning quantitative methods into practical decisions.</p>
+                                    <div class="education-card__tags">
+                                        <span>Optimization</span>
+                                        <span>Forecasting</span>
+                                        <span>Decision Science</span>
+                                    </div>
+                                </article>
+
+                                <article class="education-card education-card--support" data-education-reveal>
+                                    <div class="education-card__rail"></div>
+                                    <div class="education-card__topline">
+                                        <span class="education-card__index">02</span>
+                                        <span class="education-card__status education-card__status--muted">Foundation</span>
+                                    </div>
+                                    <p class="education-card__duration">Sep 2020 - Aug 2023</p>
+                                    <h3>BS (Honors) Mathematics, Statistics &amp; Computer Science</h3>
+                                    <p class="education-card__institution">Bundelkhand University, Jhansi</p>
+                                    <p class="education-card__meta">Department of Mathematical Sciences and Applications</p>
+                                    <p class="education-card__copy">Built the analytical base behind later data work by combining probability, inference, programming, and database fundamentals.</p>
+                                    <div class="education-card__tags">
+                                        <span>Probability</span>
+                                        <span>Statistics</span>
+                                        <span>Programming</span>
+                                    </div>
+                                </article>
+
+                                <article class="education-card education-card--compact" data-education-reveal>
+                                    <div class="education-card__rail"></div>
+                                    <div class="education-card__topline">
+                                        <span class="education-card__index">03</span>
+                                        <span class="education-card__status education-card__status--muted">Base</span>
+                                    </div>
+                                    <p class="education-card__duration">Apr 2018 - Jun 2020</p>
+                                    <h3>Senior Secondary Certificate</h3>
+                                    <p class="education-card__institution">Gurukulam Public School, Jalaun</p>
+                                    <p class="education-card__meta">Central Board of Secondary Education</p>
+                                    <p class="education-card__copy">Developed disciplined quantitative habits through mathematics and science, creating the base for later analytical work.</p>
+                                    <div class="education-card__tags">
+                                        <span>Mathematics</span>
+                                        <span>Science</span>
+                                        <span>Discipline</span>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="about-section border-top border-secondary border-opacity-25" id="about-1">
+                    <div class="about-panel" data-aos="fade-up">
+                        <div class="row g-4 g-xl-5 align-items-stretch">
+                            <div class="col-lg-5" data-aos="fade-right" data-aos-delay="50">
+                                <div class="about-media">
+                                    <div class="about-media__frame">
+                                        <div class="about-media__glow" aria-hidden="true"></div>
+                                        <img class="about-media__img" src="images/laptop_image.jpg" alt="MacBook workspace setup" loading="lazy" width="1200" height="800">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 about-copy">
+                                <p class="about-kicker">About</p>
+                                <h2 class="about-title">Clarity in the <span class="text-accent">noise</span></h2>
+                                <p class="about-lead">I combine analytical rigor with storytelling so technical depth and business context stay in the same conversation.</p>
+                                <p class="about-text">
+                                    I enjoy solving ambiguous problems end-to-end: framing the question, working with messy data, choosing the right model, and explaining results so they can be used instead of shelved. If you are building a data-informed product or team, I would love to contribute.
+                                </p>
+                                <ul class="about-highlights" aria-label="Strengths">
+                                    <li>
+                                        <span class="about-highlights__icon"><i class="fa-solid fa-database" aria-hidden="true"></i></span>
+                                        <span><strong>Structured pipelines</strong> - reproducible cleaning, features, and validation.</span>
+                                    </li>
+                                    <li>
+                                        <span class="about-highlights__icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></span>
+                                        <span><strong>Models that fit the problem</strong> - balance accuracy, speed, and interpretability.</span>
+                                    </li>
+                                    <li>
+                                        <span class="about-highlights__icon"><i class="fa-solid fa-comments" aria-hidden="true"></i></span>
+                                        <span><strong>Stakeholder-ready narratives</strong> - charts and takeaways people can act on.</span>
+                                    </li>
+                                </ul>
+                                <div class="about-actions">
+                                    <!-- <a class="btn btn-primary-custom rounded-pill px-4" href="#education-pg">Education</a> -->
+                                    <a class="btn btn-outline-light-custom rounded-pill px-4" href="html/projects.html">View projects</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="contact-section border-top border-secondary border-opacity-25" id="contact-form-id">
+                    <div class="section-head text-center" data-aos="fade-up">
+                        <h2>Let's <span class="text-accent">connect</span></h2>
+                    </div>
+                    <div class="contact-card" data-aos="zoom-in" data-aos-delay="50">
+                        <form id="contactForm" action="#" method="post" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label visually-hidden" for="fullName">Full name</label>
+                                    <input class="form-control" id="fullName" name="fullName" type="text" placeholder="Full name" autocomplete="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label visually-hidden" for="email">Email</label>
+                                    <input class="form-control" id="email" name="email" type="email" placeholder="Email" autocomplete="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label visually-hidden" for="phone">Contact number</label>
+                                    <input class="form-control" id="phone" name="phone" type="tel" placeholder="Contact number" autocomplete="tel">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label visually-hidden" for="subject">Subject</label>
+                                    <input class="form-control" id="subject" name="subject" type="text" placeholder="Subject">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label visually-hidden" for="message">Message</label>
+                                    <textarea class="form-control" id="message" name="message" placeholder="Compose your message..." required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-submit" type="submit">Start the conversation</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <footer class="site-footer site-footer--rich rounded-top-4" data-aos="fade-up">
+                    <div class="footer-accent-line" aria-hidden="true"></div>
+                    <div class="container py-4 py-lg-5">
+                        <div class="row g-4 g-lg-5 footer-grid">
+                            <div class="col-md-6 col-xl-4">
+                                <a class="footer-brand" href="#home-content">hello-verse</a>
+                                <p class="footer-tagline">Portfolio of Ankit Rathaur - data science, analytics, and thoughtful visualization for decisions that stick.</p>
+                            </div>
+                            <div class="col-6 col-md-3 col-xl-2">
+                                <h3 class="footer-heading">On this page</h3>
+                                <ul class="footer-list list-unstyled mb-0">
+                                    <li><a href="#home-content">Home</a></li>
+                                    <li><a href="#education-pg">Education</a></li>
+                                    <li><a href="#about-1">About</a></li>
+                                    <li><a href="#contact-form-id">Connect</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-3 col-xl-2">
+                                <h3 class="footer-heading">More</h3>
+                                <ul class="footer-list list-unstyled mb-0">
+                                    <li><a href="html/projects.html">Projects</a></li>
+                                    <li><a href="html/contact-us.html">Contact</a></li>
+                                    <li><a href="html/privacy-policy.html">Privacy</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-12 col-xl-4">
+                                <h3 class="footer-heading">Connect</h3>
+                                <div class="footer-social" role="list">
+                                    <a class="footer-social-btn" role="listitem" href="https://www.instagram.com/accounts/login/?hl=en" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+                                    <a class="footer-social-btn" role="listitem" href="https://www.linkedin.com/in/ankit-rathaur/" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                                    <a class="footer-social-btn" role="listitem" href="index.html" aria-label="This site"><i class="bx bx-link"></i></a>
+                                    <a class="footer-social-btn" role="listitem" href="https://github.com/t-Ankit-Rathaur?tab=repositories" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                                    <a class="footer-social-btn" role="listitem" href="mailto:ankitrathaur.du.or.26@gmail.com" aria-label="Email"><i class="bx bxl-gmail"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-bottom">
+                            <p class="footer-copy mb-0">
+                                &copy; <span id="yearSpan">2026</span> Ankit Rathaur &#8226; All rights reserved &#8226; Crafted for clarity.
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <button type="button" id="backToTop" class="back-to-top" aria-label="Back to top" aria-hidden="true">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <div class="toast-container site-toast-container p-3">
+        <div id="siteToast" class="toast site-toast toast--neutral" role="status" aria-live="polite" aria-atomic="true">
+            <div class="toast-header site-toast-header">
+                <strong class="me-auto toast-title">Notice</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body toast-msg">Message</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/site.js" defer></script>
+</body>
+</html>

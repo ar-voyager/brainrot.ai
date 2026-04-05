@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - hello-verse</title>
+  <meta name="description" content="Selected research, machine learning, and analytics projects by Ankit Rathaur." />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/projects.css" />
+</head>
+<body class="projects-page">
+  <div class="mesh-bg" aria-hidden="true"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark site-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html#home-content" aria-label="Ankit Rathaur home">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-mark__core"></span>
+          <span class="brand-mark__node brand-mark__node--one"></span>
+          <span class="brand-mark__node brand-mark__node--two"></span>
+        </span>
+        <span class="brand-copy">
+          <strong>AR</strong>
+          <small>Data Lab</small>
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#projectsNav" aria-controls="projectsNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="projectsNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#home-content"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#about-1"><i class="fa-solid fa-user"></i> About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active nav-link-projects" href="projects.html" aria-current="page"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#education-pg"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#contact-form-id"><i class="fa-solid fa-paper-plane"></i> Connect</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-nav-cta" href="contact-us.html"><i class="fa-solid fa-address-book"></i> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="projects-shell">
+    <header class="projects-hero" id="projects-hero">
+      <div class="container">
+        <div class="projects-hero-card">
+          <div class="projects-hero-copy">
+            <a class="projects-back-link" href="../index.html#home-content">
+              <i class="fa-solid fa-arrow-left-long" aria-hidden="true"></i> Back to home
+            </a>
+            <p class="projects-kicker">Project library</p>
+            <h1 class="projects-title">Simple work, clear outcomes, and a cleaner way to explore the portfolio.</h1>
+            <p class="projects-lead">This page keeps the project collection easy to scan. Search, filter, or open any card for a short project summary.</p>
+          </div>
+
+          <aside class="projects-summary-card" aria-label="Projects summary">
+            <span class="projects-summary-label">Overview</span>
+            <strong><span id="statVisible">8</span> visible</strong>
+            <p><span id="statTotal">8</span> projects in the library</p>
+            <div class="projects-count-row" aria-live="polite">
+              <span class="projects-count-pill">Total <b id="statTotalBadge">8</b></span>
+              <span class="projects-count-pill">Shown <b id="statVisibleBadge">8</b></span>
+            </div>
+            <div class="projects-active-state" id="activeFilterLabel">All sectors</div>
+          </aside>
+        </div>
+      </div>
+    </header>
+
+    <section class="container projects-controls-wrap">
+      <div class="projects-controls-panel">
+        <div class="projects-search-wrap">
+          <label class="visually-hidden" for="projectSearch">Search projects</label>
+          <div class="input-group projects-search">
+            <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="search" id="projectSearch" class="form-control" placeholder="Search title, skill, or project keyword" autocomplete="off" />
+          </div>
+        </div>
+        <div class="projects-toolbar" role="group" aria-label="Filter by category">
+          <button type="button" class="filter-chip active" data-filter="all">All</button>
+          <button type="button" class="filter-chip" data-filter="research">Research</button>
+          <button type="button" class="filter-chip" data-filter="ml">ML</button>
+          <button type="button" class="filter-chip" data-filter="marketing">Marketing</button>
+          <button type="button" class="filter-chip" data-filter="industrial">Industrial</button>
+          <button type="button" class="filter-chip" data-filter="management">Management</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container projects-main pb-5">
+      <p class="projects-empty text-center text-muted py-5 d-none" id="projectsEmpty" role="status">No projects match your filters. Try another keyword or category.</p>
+
+      <div class="projects-grid" id="projectsGrid">
+        <div class="project-item" data-category="research" data-search="ux research usability interviews pain points behavior qualitative">
+          <article class="card portfolio-card h-100 border-0">
+            <div class="card-body d-flex flex-column">
+              <div class="portfolio-card-meta">
+                <span class="portfolio-badge">Research</span>
+                <span class="portfolio-index">01</span>
+              </div>
+              <h2 class="portfolio-card-title">Research Project 1</h2>
+              <p class="portfolio-card-summary">Discover pain points and understand user behavior through structured discovery work.</p>
+              <ul class="portfolio-tags">
+                <li>Interviews</li>
+                <li>Journey maps</li>
+                <li>Insights</li>
+              </ul>
+              <div class="portfolio-card-footer mt-auto">
+                <span class="portfolio-card-note">User understanding and decision support</span>
+                <button type="button" class="btn btn-sm btn-primary-custom rounded-pill px-3 project-open" data-bs-toggle="modal" data-bs-target="#projectModal"
+                  data-title="Research Project 1"
+                  data-category="Research"
+                  data-detail="Mixed-methods study combining stakeholder interviews and survey data to prioritize problem areas. Deliverables included affinity mapping, prioritized opportunity themes, and measurable UX metrics aligned with business goals.">
+                  View details
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="project-item" data-category="research" data-search="prototype validation usability testing interactive figma">
+          <article class="card portfolio-card h-100 border-0">
+            <div class="card-body d-flex flex-column">
+              <div class="portfolio-card-meta">
+                <span class="portfolio-badge">Research</span>
+                <span class="portfolio-index">02</span>
+              </div>
+              <h2 class="portfolio-card-title">Research Project 2</h2>
+              <p class="portfolio-card-summary">Validate ideas with a prototype and task-based usability sessions.</p>
+              <ul class="portfolio-tags">
+                <li>Prototype</li>
+                <li>Testing</li>
+                <li>Iteration</li>
+              </ul>
+              <div class="portfolio-card-footer mt-auto">
+                <span class="portfolio-card-note">Validation before product decisions</span>
+                <button type="button" class="btn btn-sm btn-primary-custom rounded-pill px-3 project-open" data-bs-toggle="modal" data-bs-target="#projectModal"
+                  data-title="Research Project 2"
+                  data-category="Research"
+                  data-detail="End-to-end validation sprint: clickable prototype, test script, and results dashboard. Findings were translated into a concise backlog ranked by impact and effort for the next release cycle.">
+                  View details
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="project-item" data-category="ml" data-search="python sklearn classification pipeline mvp model">
+          <article class="card portfolio-card h-100 border-0">
+            <div class="card-body d-flex flex-column">
+              <div class="portfolio-card-meta">
+                <span class="portfolio-badge">ML</span>
+                <span class="portfolio-index">03</span>
+              </div>
+              <h2 class="portfolio-card-title">ML Project 1</h2>
+              <p class="portfolio-card-summary">Launch an MVP with a reproducible training pipeline and evaluation harness.</p>
+              <ul class="portfolio-tags">
+                <li>Python</li>
+                <li>Scikit-learn</li>
+                <li>Metrics</li>
+              </ul>
+              <div class="portfolio-card-footer mt-auto">
+                <span class="portfolio-card-note">Fast baseline to working model flow</span>
+                <button type="button" class="btn btn-sm btn-primary-custom rounded-pill px-3 project-open" data-bs-toggle="modal" data-bs-target="#projectModal"
+                  data-title="ML Project 1"
+                  data-category="Machine learning"
+                  data-detail="Baseline and tuned models with cross-validation, leakage checks, and threshold tuning for business constraints. Packaging includes requirements, config, and a lightweight API sketch for integration.">
+                  View details
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="project-item" data-category="ml" data-search="deep learning pytorch visualization ops mlops monitoring">
+          <article class="card portfolio-card h-100 border-0">
+            <div class="card-body d-flex flex-column">
+              <div class="portfolio-card-meta">
+                <span class="portfolio-badge">ML</span>
+                <span class="portfolio-index">04</span>
+              </div>
+              <h2 class="portfolio-card-title">ML Project 2</h2>
+              <p class="portfolio-card-summary">Reliable models, monitoring, and clear product behavior when predictions meet real users.</p>
+              <ul class="portfolio-tags">
+                <li>Evaluation</li>
+                <li>Monitoring</li>
+                <li>DesignOps</li>
+              </ul>
+              <div class="portfolio-card-footer mt-auto">
+                <span class="portfolio-card-note">Interpretability and drift awareness</span>
+                <button type="button" class="btn btn-sm btn-primary-custom rounded-pill px-3 project-open" data-bs-toggle="modal" data-bs-target="#projectModal"
+                  data-title="ML Project 2"
+                  data-category="Machine learning"
+                  data-detail="Explored model families with emphasis on interpretability and drift detection. Documented decision thresholds, fallback behavior, and a review cadence so product and design stay aligned as data changes.">
+                  View details
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="project-item" data-category="marketing" data-search="campaign analytics attribution roi growth experiments">
+          <article class="card portfolio-card h-100 border-0">
+            <div class="card-body d-flex flex-column">
+              <div class="portfolio-card-meta">
+                <span class="portfolio-badge">Marketing</span>
+                <span class="portfolio-index">05</span>
+              </div>
+              <h2 class="portfolio-card-title">Marketing Project</h2>
+              <p class="portfolio-card-summary">Experiments, attribution, and reporting that help teams see what is actually driving growth.</p>
+              <ul class="portfolio-tags">
+                <li>Attribution</li>
+                <li>Experiments</li>
+                <li>Dashboards</li>
+              </ul>
+              <div class="portfolio-card-footer mt-auto">
+                <span class="portfolio-card-note">Decision-ready growth reporting</span>
+                <button type="button" class="btn btn-sm btn-primary-custom rounded-pill px-3 project-open" data-bs-toggle="modal" data-bs-target="#projectModal"
+                  data-title="Marketing Project"
+                  data-category="Marketing analytics"
+                  data-detail="Built a reporting layer connecting channel spend to downstream conversions with sanity checks and seasonality notes. Stakeholders received a short narrative plus charts they could filter by segment and time window.">
+                  View details
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="project-item" data-category="industrial" data-search="operations throughput quality supply chain process">
+          <article class="card portfolio-card h-100 border-0">
+            <div class="card-body d-flex flex-column">
+              <div class="portfolio-card-meta">
+                <span class="portfolio-badge">Industrial</span>
+                <span class="portfolio-index">06</span>
+              </div>
+              <h2 class="portfolio-card-title">Industrial Project</h2>
+              <p class="portfolio-card-summary">Operations-focused analysis for bottlenecks, variability, and practical process improvement.</p>
+              <ul class="portfolio-tags">
+                <li>Operations</li>
+                <li>Quality</li>
+                <li>KPIs</li>
+              </ul>
+              <div class="portfolio-card-footer mt-auto">
+                <span class="portfolio-card-note">Practical system improvement work</span>
+                <button type="button" class="btn btn-sm btn-primary-custom rounded-pill px-3 project-open" data-bs-toggle="modal" data-bs-target="#projectModal"
+                  data-title="Industrial Project"
+                  data-category="Industrial"
+                  data-detail="Mapped the value stream, quantified wait times, and tested improvement ideas with before/after metrics. Recommendations prioritized quick wins that reduced rework without heavy capital spend.">
+                  View details
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+<!-- INDUSTRIAL MANAGEMENT CARD REMOVED -->
+        <!-- <div class="project-item" data-category="industrial" data-search="management lean six sigma scheduling inventory">
+          <article class="card portfolio-card h-100 border-0">
+            <div class="card-body d-flex flex-column">
+              <div class="portfolio-card-meta">
+                <span class="portfolio-badge">Industrial</span>
+                <span class="portfolio-index">07</span>
+              </div>
+              <h2 class="portfolio-card-title">Industrial Management</h2>
+              <p class="portfolio-card-summary">Structured programs for throughput, safety, and cross-team coordination.</p>
+              <ul class="portfolio-tags">
+                <li>Lean</li>
+                <li>Scheduling</li>
+                <li>Controls</li>
+              </ul>
+              <div class="portfolio-card-footer mt-auto">
+                <span class="portfolio-card-note">Lean systems with stable reviews</span>
+                <button type="button" class="btn btn-sm btn-primary-custom rounded-pill px-3 project-open" data-bs-toggle="modal" data-bs-target="#projectModal"
+                  data-title="Industrial Management"
+                  data-category="Industrial"
+                  data-detail="Designed a management system for recurring reviews, escalation paths, and KPI ownership. Focused on clarity so teams could sustain improvements after the initial rollout.">
+                  View details
+                </button>
+              </div>
+            </div>
+          </article>
+        </div> -->
+<!-- MANAGEMENT CARD REMOVED -->
+        <!-- <div class="project-item" data-category="management" data-search="program management roadmap stakeholder delivery agile">
+          <article class="card portfolio-card h-100 border-0">
+            <div class="card-body d-flex flex-column">
+              <div class="portfolio-card-meta">
+                <span class="portfolio-badge">Management</span>
+                <span class="portfolio-index">08</span>
+              </div>
+              <h2 class="portfolio-card-title">Management Project</h2>
+              <p class="portfolio-card-summary">Complex initiatives planned with milestones, risk visibility, and stakeholder clarity.</p>
+              <ul class="portfolio-tags">
+                <li>Roadmap</li>
+                <li>Risks</li>
+                <li>Stakeholders</li>
+              </ul>
+              <div class="portfolio-card-footer mt-auto">
+                <span class="portfolio-card-note">Planning with less noise and more clarity</span>
+                <button type="button" class="btn btn-sm btn-primary-custom rounded-pill px-3 project-open" data-bs-toggle="modal" data-bs-target="#projectModal"
+                  data-title="Management Project"
+                  data-category="Management"
+                  data-detail="Program plan with milestones, dependency map, and a lightweight risk register. Communication rhythm kept sponsors informed while protecting maker time for the core team.">
+                  View details
+                </button>
+              </div>
+            </div>
+          </article>
+        </div> -->
+      </div>
+    </section>
+  </main>
+
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content project-modal-content">
+        <div class="modal-header border-secondary border-opacity-25">
+          <div>
+            <p class="small text-accent mb-1" id="projectModalCategory">Category</p>
+            <h2 class="modal-title h4 mb-0" id="projectModalTitle">Project</h2>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted mb-0" id="projectModalBody">Description</p>
+        </div>
+        <div class="modal-footer border-secondary border-opacity-25">
+          <button type="button" class="btn btn-outline-light-custom rounded-pill" data-bs-dismiss="modal">Close</button>
+          <a class="btn btn-primary-custom rounded-pill" href="../index.html#contact-form-id">Discuss this project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- FOOTER SECTION -->
+  <footer class="site-footer site-footer--rich rounded-top-4 mt-auto">
+    <div class="footer-accent-line" aria-hidden="true"></div>
+    <div class="container py-4 py-lg-5">
+      <div class="row g-4 g-lg-5 footer-grid">
+        <div class="col-md-6 col-xl-4">
+          <a class="footer-brand" href="../index.html#home-content">hello-verse</a>
+          <p class="footer-tagline">Simple project gallery for research, machine learning, analytics, and strategic problem solving.</p>
+        </div>
+        <div class="col-6 col-md-3 col-xl-2">
+          <h3 class="footer-heading">Home</h3>
+          <ul class="footer-list list-unstyled mb-0">
+            <li><a href="../index.html#home-content">Intro</a></li>
+            <li><a href="../index.html#education-pg">Education</a></li>
+            <li><a href="../index.html#about-1">About</a></li>
+            <li><a href="../index.html#contact-form-id">Connect</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-xl-2">
+          <h3 class="footer-heading">This page</h3>
+          <ul class="footer-list list-unstyled mb-0">
+            <li><a href="#projects-hero">Top</a></li>
+            <li><a href="#projectsGrid">Grid</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+            <li><a href="privacy-policy.html">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="col-md-12 col-xl-4">
+          <h3 class="footer-heading">Connect</h3>
+          <div class="footer-social" role="list">
+            <a class="footer-social-btn" role="listitem" href="https://www.instagram.com/accounts/login/?hl=en" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+            <a class="footer-social-btn" role="listitem" href="https://www.linkedin.com/in/ankit-rathaur/" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+            <a class="footer-social-btn" role="listitem" href="../index.html" aria-label="Home"><i class="bx bx-link"></i></a>
+            <a class="footer-social-btn" role="listitem" href="https://github.com/t-Ankit-Rathaur?tab=repositories" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+            <a class="footer-social-btn" role="listitem" href="mailto:ankitrathaur.du.or.26@gmail.com" aria-label="Email"><i class="bx bxl-gmail"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy mb-0">
+          &copy; <span id="yearSpan">2026</span> Ankit Rathaur &#8226; All rights reserved &#8226; <span class="text-muted">Projects</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container site-toast-container p-3">
+    <div id="siteToast" class="toast site-toast toast--neutral" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header site-toast-header">
+        <strong class="me-auto toast-title">Notice</strong>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body toast-msg">Message</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="../js/projects.js" defer></script>
+</body>
+</html>

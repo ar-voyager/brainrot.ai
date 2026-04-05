@@ -1,0 +1,124 @@
+/*---------------------------------------------------
+  CSS Custom Properties
+-----------------------------------------------------*/
+:root {
+  --primary-color: #1a1a1a;
+  --accent-color: #ff4500;
+  --accent--color: hsl(0, 0%, 96%);
+  --smoky-white: hsl(0, 0%, 96%);
+  --light-bg: hsl(0, 0%, 7%);
+  --dark-bg: #111;
+  --header-bg: hsl(0, 0%, 96%);
+  --transition: 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --font-family: 'Poppins', sans-serif;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*---------------------------------------------------
+  Global Reset & Base Styles
+---------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+/*---------------------------------------------------
+  Footer Section
+---------------------------------------------------*/
+.footer {
+  background: #111;
+  padding: 100px 10%;
+  text-align: center;
+  color: #ddd;
+  animation: fadeIn 1s ease-out;
+  border-radius: 25px 25px 0px 0px;
+  /* transform: translateX(-20%); */
+}
+
+.footer .social {
+  margin-bottom: 20px;
+}
+
+.footer .social a {
+  margin: 0 10px;
+  font-size: 1.8rem;
+  color: #ddd;
+  transition: color var(--transition);
+}
+
+.footer .social a:hover {
+  color: var(--accent-color);
+}
+
+.footer .list {
+  margin: 20px 0;
+}
+
+.footer .list li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer .list li a {
+  color: #ddd;
+  font-size: 1rem;
+  transition: color var(--transition);
+}
+
+.footer .list li a:hover {
+  color: var(--accent-color);
+}
+
+.footer .copyright {
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/*---------------------------------------------------
+  Custom Scrollbar
+---------------------------------------------------*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/*---------------------------------------------------
+  Keyframe Animations
+---------------------------------------------------*/
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
