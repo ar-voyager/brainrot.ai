@@ -1,4 +1,4 @@
-# hello-verse
+# barinrot.ai
 
 Portfolio website for Ankit Rathaur focused on analytics, machine learning, research, and data storytelling.
 
@@ -16,8 +16,6 @@ This is a static multi-page portfolio built with:
 ## Entry Points
 
 - `index.html` - home page
-- `html/projects.html` - projects library
-- `html/contact-us.html` - contact page
 
 ## Current Structure
 
@@ -34,14 +32,14 @@ hello-verse/
 |   |-- index.css
 |   |-- projects.css
 |   |-- contact-us.css
-|   |-- index_style.css          # legacy copy
-|   |-- projects_styles.css      # legacy copy
-|   `-- contact_us_style.css     # legacy copy
+|   |-- index_style.css          
+|   |-- projects_styles.css      
+|   `-- contact_us_style.css     
 |-- html/
 |   |-- projects.html
 |   |-- contact-us.html
-|   |-- project.html             # legacy copy
-|   `-- contact-form.html        # older standalone form page
+|   |-- project.html             
+|   `-- contact_form.html 
 |-- images/
 `-- js/
     |-- site.js
@@ -52,7 +50,7 @@ hello-verse/
 
 Active files now follow these rules:
 
-- Pages use `kebab-case`
+- Pages use `snake_case`
 - Page-specific stylesheets use `kebab-case`
 - JavaScript files use short lowercase names
 - Shared styles live in `css/index.css`
